@@ -1,0 +1,22 @@
+BALANCED PARENTHESIS PDA
+
+              ( / push (
+          +----------------+
+          |                v
+        (q0) ------------> (q0)
+          ^                |
+          +----------------+
+              ) / pop (
+
+Accept when input ends and only bottom marker remains.
+
+PALINDROME PDA
+(q0) --push first half--> (q1) --guess middle--> (q2)
+(q2) --matching symbol / pop--> (q2) --empty stack--> ACCEPT
+
+ARITHMETIC CFG
+E -> T E'
+E' -> + T E' | epsilon
+T -> F T'
+T' -> * F T' | epsilon
+F -> (E) | id
